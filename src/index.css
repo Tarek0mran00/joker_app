@@ -1,0 +1,29 @@
+/* Adding a fun animated gradient background */
+body {
+  
+  background-image: url('../public/back.jpg');
+  background-size: cover; /* Cover the entire viewport */
+  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* Full screen height */
+}
+
+/* Define keyframes for the background animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

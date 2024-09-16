@@ -1,0 +1,49 @@
+/* Creative Button Styles */
+.creative-button {
+  padding: 12px 18px;
+  background-color: #6c5b7b; /* Muted Purple for a more playful and vibrant look */
+  color: #f8f9fa; /* Very light grey text for contrast */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced 3D shadow effect */
+  font-family: 'Fredericka the Great', serif;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.creative-button:hover {
+  background-color: #f67280; /* Coral color on hover for contrast */
+  transform: translateY(-4px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.creative-button:active {
+  transform: translateY(2px); /* Button presses down on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Less shadow on click */
+}
+
+.creative-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.1));
+  z-index: 0;
+}
+
+.creative-button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}

@@ -1,0 +1,141 @@
+/* General Styles */
+/* Joke Container */
+.joke-container {
+    padding: 30px;
+    font-family: 'Fredericka the Great', serif;
+    background-color: rgba(244, 246, 249, 0.9); /* Light grey with some transparency to let the brick background show through */
+    max-height: 80vh; /* Max height is 80% of the user's screen */
+    overflow-y: auto; /* Allow scrolling if content exceeds the container height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px; /* Rounded edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly deeper shadow for better contrast */
+    max-width: 800px; /* Container width for a centered look */
+    margin: 20px auto; /* Center the container on the screen */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+  }
+  
+  /* Hover effect for a "cool" interactive feel */
+  .joke-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  }
+  
+  /* Headings */
+  h1, h2 {
+    text-align: center;
+    color: #e63946; /* A bold color to stand out against the brick */
+  }
+  
+  /* Joke Grid */
+  .joke-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px; /* Limit the max width for better readability */
+  }
+  
+  /* Lists */
+  .jokes-list, .favorites-list {
+    padding: 20px;
+    border: 1px solid #f1faee; /* Light border color for the list items */
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to match the background */
+    max-height: 300px; /* Limit the height of the joke and favorites list */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+  }
+  
+  /* Joke Item Styles */
+.joke-item {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #f1faee; /* Light border color for joke items */
+    border-radius: 8px;
+    background-color: #ffffff; /* Clean white background for jokes */
+    color: #333333; /* Dark grey color for the joke text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  }
+  
+  .joke-item:hover {
+    background-color: #e63946; /* Bold red background on hover */
+    color: #ffffff; /* Change text color to white for contrast */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+
+  .refresh-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ff6f61; /* Coral for a vibrant, fun look */
+    border-radius: 12px; /* Rounded edges to match other elements */
+    color: #ffffff; /* White text for better contrast */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a 3D effect */
+    font-family: 'Fredericka the Great', serif; /* Consistent font */
+}
+
+.refresh-button:hover {
+    background-color: #e03e2f; /* Darker coral on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.refresh-button:active {
+    background-color: #c0392b; /* Even darker red on click */
+    transform: translateY(1px); /* Button presses down on click */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Less shadow on click */
+}
+
+
+/* Custom scrollbars for Webkit-based browsers (Chrome, Safari, Edge) */
+.joke-container::-webkit-scrollbar,
+.jokes-list::-webkit-scrollbar,
+.favorites-list::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.joke-container::-webkit-scrollbar-track,
+.jokes-list::-webkit-scrollbar-track,
+.favorites-list::-webkit-scrollbar-track {
+  background: rgba(244, 246, 249, 0.9); /* Track color matching the container background */
+  border-radius: 10px; /* Rounded edges for the track */
+}
+
+.joke-container::-webkit-scrollbar-thumb,
+.jokes-list::-webkit-scrollbar-thumb,
+.favorites-list::-webkit-scrollbar-thumb {
+  background-color: #e63946; /* Bold color for the thumb */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+  border: 2px solid rgba(244, 246, 249, 0.9); /* Border to give a "cut-out" look with the background color */
+}
+
+.joke-container::-webkit-scrollbar-thumb:hover,
+.jokes-list::-webkit-scrollbar-thumb:hover,
+.favorites-list::-webkit-scrollbar-thumb:hover {
+  background-color: #f1faee; /* Light color on hover */
+}
+
+/* For Firefox */
+.joke-container,
+.jokes-list,
+.favorites-list {
+  scrollbar-width: thin; /* Slim scrollbar */
+  scrollbar-color: #e63946 rgba(244, 246, 249, 0.9); /* Thumb color and track color */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .joke-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,44 @@
+.joke-item {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #F5A623; /* Sunset Orange border */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #FFF; /* Clean white background */
+    color: #333; /* Dark text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .joke-item:hover {
+    background-color: #F2CC8F; /* Warm yellow background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  
+  .joke-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #50E3C2; /* Mint Green on hover */
+  }
+  
+  .remove-favorite {
+    background-color: #E07A5F; /* Soft red background for remove button */
+    color: #FFF;
+  }
+  
+  .remove-favorite:hover {
+    background-color: #F5A623; /* Sunset Orange on hover */
+  }
+  
